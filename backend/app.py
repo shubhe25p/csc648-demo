@@ -52,5 +52,13 @@ def getTodo():
     alltodo = Todo.query.all()
     return json.dumps([todo.as_dict() for todo in alltodo])
 
+with app.app_context():
+    db.create_all()
+    if (len(Todo.query.all()) > 0):
+        db.session.query(Todo).delete()
+        db.session.commit()
+        print("Table emptied successfully!")
+
+
 if __name__ == '__main__':
     app.run()

@@ -4,12 +4,12 @@ class UserService{
         const data = {
             item: item
         }
-        return axios.post('http://172.178.55.203:5000/add', data).then(response => {
+        return axios.post('https://probable-space-journey-rr7w9469v7qfww9q-5000.app.github.dev/add', data).then(response => {
             return response;
         })
     }
     fetchData(){
-        return axios.get('http://172.178.55.203:5000/getall').then(response => {
+        return axios.get('https://probable-space-journey-rr7w9469v7qfww9q-5000.app.github.dev/getall').then(response => {
             return response;
         })
     }
