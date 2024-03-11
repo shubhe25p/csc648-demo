@@ -3,7 +3,7 @@ sudo docker run --name mydb -p 5432:5432 -e POSTGRES_PASSWORD=csc648demo -d post
 # add inbound rule for port 5432
 # docker port mapping
 
-psql -h 172.178.55.203 -p 5432 -d postgres -U postgres
+psql -h PUBLIC-IP-INSTANCE -p 5432 -d postgres -U postgres
 
 CREATE TABLE todo (
     id serial PRIMARY KEY,
