@@ -1,3 +1,5 @@
+Install docker on Ubuntu VM: https://docs.docker.com/engine/install/ubuntu/
+
 sudo docker run --name mydb -p 5432:5432 -e POSTGRES_PASSWORD=csc648demo -d postgres
 
 # add inbound rule for port 5432
